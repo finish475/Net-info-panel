@@ -12,8 +12,8 @@ const v4IP = v4.primaryAddress;
     // No network connection
     if (!v4IP) {
         $.done({
-            title: "Không kết nối với mạng",
-            content: "Vui lòng kiểm tra kết nối mạng",
+            title: "Not Connected",
+            content: "Please Check connect",
             icon: "airplane"
         });
         return;
@@ -25,10 +25,10 @@ const v4IP = v4.primaryAddress;
     const externalIP = resp.body;
 
     const body = {
-        title: wifi.ssid || "Dữ liệu di động",
+        title: wifi.ssid || "Cellular Data",
         content: `IP：${ip} \n`
-            + (wifi.ssid ? `địa chỉ router：${router}\n` : "")
-            + `IP Puplic IP：${externalIP}`,
+            + (wifi.ssid ? ` router：${router}\n` : "")
+            + `IP Puplic：${externalIP}`,
         icon: wifi.ssid ? "wifi" : "antenna.radiowaves.left.and.right"
     };
     $.done(body);
