@@ -1,0 +1,9 @@
+#!name=Surge Network info Panel
+#!platform=ios
+#!desc=Surge Network info Panel
+
+[Panel]
+net-info-panel=title="status",content="reload",style=info,script-name=net-info-panel,update-interval=1
+
+[Script]
+net-info-panel=script-path=https://raw.githubusercontent.com/finish475/Net-info-panel/main/net-info-panel.js,type=generic
