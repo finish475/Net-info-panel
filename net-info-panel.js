@@ -26,8 +26,8 @@ const v4IP = v4.primaryAddress;
 
     const body = {
         title: wifi.ssid || "Cellular Data",
-        content: `IP：${ip} \n`
-            + (wifi.ssid ? ` Address router：${router}\n` : "")
+        content: `IP LAN：${ip} \n`
+            + (wifi.ssid ? `Address router：${router}\n` : "")
             + `IP Puplic：${externalIP}`,
         icon: wifi.ssid ? "wifi" : "antenna.radiowaves.left.and.right"
     };
